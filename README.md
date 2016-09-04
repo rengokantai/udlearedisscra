@@ -171,3 +171,16 @@ byscore
 ```
 ZRANGEBYSCORE k 100 200
 ```
+ZCARD,ZCOUNT
+```
+ZCARD k
+ZCOUNT k(100,200)
+```
+add zcore for element in sortedset
+```
+ZINCRBY k 10 "v"
+```
+zscore
+```
+ZSCORE k "v"
+```
