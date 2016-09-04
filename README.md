@@ -122,6 +122,9 @@ CLIENT KILL id
 ```
 LRANGE k 0 -1
 ```
+
+
+######Set
 test is member
 ```
 SISMEMBER k "v"
@@ -145,4 +148,26 @@ SUNION k1 k2
 return random member of set
 ```
 SRANDMEMBER k 3
+```
+pop random number of nembers
+```
+SPOP k  //pop 1 item
+SPOP k 3 //pop 3 items
+```
+######sortedset
+- score is required
+- must be float/integer  
+- 1=1.0  
+mind the parameter order.
+```
+ZADD k 100 "v"
+```
+
+list all elements[stackoverflow](http://stackoverflow.com/questions/11504154/get-all-members-in-sorted-set)
+```
+zrange k 0 -1
+```
+byscore
+```
+ZRANGEBYSCORE k 100 200
 ```
