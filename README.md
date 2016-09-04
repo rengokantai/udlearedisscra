@@ -78,5 +78,36 @@ random
 ```
 RANDOMKEY
 ```
-
-
+######Client and comfig commands
+examples
+```
+config get port
+config get *
+config get *max-*-entries*
+```
+set 
+```
+config set k "v"
+````
+INFO
+```
+INFO server
+INFO clients
+INFO memory
+INFO persistence
+INFO stats /replication/cpu/commandstats/cluster/keyspace/all/default
+```
+config resetstat
+```
+CONFIG RESETSTAT
+```
+COMMAND  /  COMMAND INFO  
+- returns details about all redis commands
+```
+COMMAND INFO GET
+```
+CLIENT LIST
+- returns info and stats on the clients connected to server
+```
+CLIENT LIST
+```
