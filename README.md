@@ -58,4 +58,25 @@ MATCH
 - match a pattern specified
 - SCAN 0 MATCH k*  
 
-KEYS pattern(should be avoided in prod env)
+KEYS pattern(should be avoided in prod env)  
+
+demo:
+```
+mset k1 "1" k2 "2" k3 "3" k4 "4" k5 "5" k6 "6" k7 "7" k8 "8" k9 "9" k10 "10" k11 "11"
+```
+then
+```
+scan 0
+scan 4 count 3
+scan 0 match key1*
+```
+list all keys
+```
+KEYS *
+```
+random
+```
+RANDOMKEY
+```
+
+
