@@ -31,7 +31,7 @@ RENAME
 RENAMENX
 - renames key to newkey if newkey does not exist  
 GETSET
-- set key and return old value  
+- set key and return old value  //can be used with INCR for an automatic reset
 
 
 SETEX
@@ -107,12 +107,12 @@ COMMAND  /  COMMAND INFO
 COMMAND INFO GET
 ```
 CLIENT LIST
-- returns info and stats on the clients connected to server
+- returns info and stats on the clients connected to server 
 ```
-CLIENT LIST
+CLIENT LIST 
 ```
 ```
-CLIENT SETNAME name
+CLIENT SETNAME name  //set this client name
 CLIENT GETNAME //returns the name of the current client connection
 CLIENT KILL ip:port
 CLIENT KILL id
