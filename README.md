@@ -42,3 +42,20 @@ PSETEX /
 - in milliseconds
 - setex k 1000 "v"
 - PTTL, same as TTL(millisecond)
+
+PERSIST
+- remove expire on a key
+- persist k
+
+######SCAN and MATCH
+SCAN Guarantees
+- Full iterations will retrive all elements that were present in the collection from the start to the end
+- Never returns any element that was not present in the collection from start to finish  
+COUNT
+- default count=10 ,we can overrite: SCAN COUNT 20  
+
+MATCH
+- match a pattern specified
+- SCAN 0 MATCH k*  
+
+KEYS pattern(should be avoided in prod env)
