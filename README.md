@@ -111,3 +111,9 @@ CLIENT LIST
 ```
 CLIENT LIST
 ```
+```
+CLIENT SETNAME name
+CLIENT GETNAME //returns the name of the current client connection
+CLIENT KILL ip:port
+CLIENT KILL id
+```
