@@ -117,3 +117,32 @@ CLIENT GETNAME //returns the name of the current client connection
 CLIENT KILL ip:port
 CLIENT KILL id
 ```
+#####Data types
+######List
+```
+LRANGE k 0 -1
+```
+test is member
+```
+SISMEMBER k "v"
+```
+list all members
+```
+SISMEMBERS k
+```
+return length
+```
+SCAD k
+```
+SMOVE (move v from k1 to k2)
+```
+SMOVE k1 k2 "v"
+```
+combine
+```
+SUNION k1 k2
+```
+return random member of set
+```
+SRANDMEMBER k 3
+```
