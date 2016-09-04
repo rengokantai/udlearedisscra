@@ -14,3 +14,5 @@ Different
 rename-command CONFIG 12345678
 rename-command CONFIG ""
 ```
+######quiz
+redis is data structure server.
