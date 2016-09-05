@@ -202,3 +202,13 @@ HSTRLEN k v
 ######quiz
 What is the default sort order of a list? - By insertion
 When deleting a value from a hash using HDEL, what is returned? - The number of fields deleted
+
+#####6
+######persistence
+persistence process
+- client sends write command to database(client memory)
+- database receives the write(server meomry)
+- database calls system call that writes data on disk(kernel buffer)
+- The OS transfers the write buffer to the disk controller(disk cache)
+- disk controller writes to physical media (physical disk)  
+
