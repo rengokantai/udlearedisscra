@@ -190,3 +190,15 @@ zscore
 ```
 ZSCORE k "v"
 ```
+######hash
+HKEYS,HVALS,HGETALL(k and v), HINCRBY  (param order is diff from ZINCRBY!)
+```
+HINCRBY k v 1
+```
+HSTRLEN (get value string length)
+```
+HSTRLEN k v
+```
+######quiz
+What is the default sort order of a list? - By insertion
+When deleting a value from a hash using HDEL, what is returned? - The number of fields deleted
