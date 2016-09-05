@@ -163,7 +163,8 @@ mind the parameter order.
 ZADD k 100 "v"
 ```
 
-list all elements[stackoverflow](http://stackoverflow.com/questions/11504154/get-all-members-in-sorted-set)
+list all elements[stackoverflow](http://stackoverflow.com/questions/11504154/get-all-members-in-sorted-set)  
+from low to high
 ```
 zrange k 0 -1
 ```
@@ -175,6 +176,11 @@ ZCARD,ZCOUNT
 ```
 ZCARD k
 ZCOUNT k(100,200)
+```
+ZRANK
+```
+ZRANK k "v"
+ZREVRANK k "v"
 ```
 add zcore for element in sortedset
 ```
