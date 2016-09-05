@@ -212,3 +212,23 @@ persistence process
 - The OS transfers the write buffer to the disk controller(disk cache)
 - disk controller writes to physical media (physical disk)  
 
+pools - multiple redis servers running on the same machine using diff ports
+- more cpus
+- better tuning
+- efficient memory usage
+
+replication
+- async
+- multiple slaves
+- connection from other slaves
+- non blocking on slave side
+- data redundancy
+- slave read-only  
+
+
+replication process
+- Master starts saving in the bg and starts buffering all new commands that will modify the dataset
+- After bg saving the master transfers the database file to the slave
+- the slave saves the files to the disk and loads it into memory
+- the master sends all buffered commands to the slave
+- 
