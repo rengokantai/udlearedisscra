@@ -230,5 +230,11 @@ replication process
 - Master starts saving in the bg and starts buffering all new commands that will modify the dataset
 - After bg saving the master transfers the database file to the slave
 - the slave saves the files to the disk and loads it into memory
-- the master sends all buffered commands to the slave
-- 
+- the master sends all buffered commands to the slave  
+
+
+persistence options
+- RDB - point in time snapshots
+- AOF - write operation logging
+- disabled
+- Both RDB and AOF
