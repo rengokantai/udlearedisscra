@@ -274,4 +274,30 @@ save interval 60 sec,if at least 1000 keys canged
 RDB disadvantages
 - Limited to save points
 - Not good if you want to minimize the chance of data loss if redis stops working
-- Needs to fork() often which can be CPU perf, time consuming
+- Needs to fork() often which can be CPU perf, time consuming  
+
+######22 AOF
+Append only file
+- Main option
+- Every operation gets logged
+- Log is the same format used by clients
+- can be piped to another instance
+- dataset can be reconstructed  
+
+AOF rewrite
+- used when AOF file gets big
+- rewrite database from scratch
+- directly access data in memory
+- no need for disk access
+- once written, the temp file is synced on to disk  
+
+fsync options
+- no fsync(done by os, every 30s)
+- every second(default)
+- every query(slow)  
+
+AOF advan
+- mush more durable
+- single file with no corruption
+- automatically reerite in the bg if it get too bug
+- easy to undestand log/instructions
