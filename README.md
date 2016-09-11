@@ -238,3 +238,23 @@ persistence options
 - AOF - write operation logging
 - disabled
 - Both RDB and AOF
+
+######21 RDB snapshot
+RDB: Redis Databse file
+- simplest persistence mode
+- enabled by default!
+- single-file point-in-time representation
+- use snapshots  
+
+Advantages
+- easy to use
+- compact
+- perfect for backup and recovery
+- maximize redis performance
+- allows faster restarts with big datasets acmpared to AOF  
+
+snapshotting
+- controlled by user
+- can be modified at runtime
+- snapshots are produced as .rdb files
+- SAVE and BGSAVE commands
