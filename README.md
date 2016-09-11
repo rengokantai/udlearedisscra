@@ -317,3 +317,12 @@ backup (the dest dict must not exist)
 ```
 rdiff-backup --preserve-numerical-ids --no-file-statistics /var/lib/redis  /home/ke/redis
 ```
+change mode
+```
+redis-cli
+BGREWRITEAOF
+```
+change config
+```
+appendonly yes
+```
