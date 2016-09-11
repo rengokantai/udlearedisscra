@@ -300,4 +300,20 @@ AOF advan
 - mush more durable
 - single file with no corruption
 - automatically reerite in the bg if it get too bug
-- easy to undestand log/instructions
+- easy to undestand log/instructions  
+
+AOF disadvan
+- takes longer to load in memory on server restart
+- usnslly bigger than the equi RDB files
+- can be slower then RDB depending on the fsync policy
+- bugs  
+
+
+######23 RDB AOF in action
+```
+apt install -y rdiff-backup
+```
+backup (the dest dict must not exist)
+```
+rdiff-backup --preserve-numerical-ids --no-file-statistics /var/lib/redis  /home/ke/redis
+```
