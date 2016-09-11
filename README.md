@@ -257,4 +257,21 @@ snapshotting
 - controlled by user
 - can be modified at runtime
 - snapshots are produced as .rdb files
-- SAVE and BGSAVE commands
+- SAVE and BGSAVE commands  
+
+
+SAVE, BGSAVE:
+```
+SAVE
+```
+Performs sync save, producing point-in-time snapshot of all data inside of the redis instance in the form of an .rdb.  
+Should not be called in prod as it will block all other clients.
+```
+SAVE 60 1000
+```
+save interval 60 sec,if at least 1000 keys canged  
+
+RDB disadvantages
+- Limited to save points
+- Not good if you want to minimize the chance of data loss if redis stops working
+- Needs to fork() often which can be CPU perf, time consuming
